@@ -249,7 +249,6 @@ class SwiftController extends Controller
         NotifyUserOfCompletedExport::dispatch();
         $fileUrl = asset('storage/exports/swifts.xlsx');
 
-
         return response()->json([
            'message' => 'Задача поставлена в очередь',
            'data' => $fileUrl,

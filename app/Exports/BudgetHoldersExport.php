@@ -17,9 +17,6 @@ class BudgetHoldersExport implements FromQuery, WithHeadings
 {
 
     use Exportable;
-    /**
-    * @return \Illuminate\Support\Collection
-    */
 
     public function querySize(): int{
         return 15000;
@@ -42,21 +39,4 @@ class BudgetHoldersExport implements FromQuery, WithHeadings
             'Ответственный',
         ];
     }
-
-//     public function chunkSize(): int
-//     {
-//         // Размер чанка для обработки больших данных
-//         return 1000;
-//     }
-
-//     public function map($swift): array
-//     {
-//         return [
-//             $swift->swift_code,
-//             $swift->bank_name,
-//             $swift->country,
-//             $swift->city,
-//             $swift->address,
-//         ];
-//     }
 }

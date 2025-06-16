@@ -37,21 +37,4 @@ class SwiftExport implements FromQuery, WithHeadings, ShouldQueue
             'Адрес',
         ];
     }
-
-//     public function chunkSize(): int
-//     {
-//         // Размер чанка для обработки больших данных
-//         return 1000;
-//     }
-
-//     public function map($swift): array
-//     {
-//         return [
-//             $swift->swift_code,
-//             $swift->bank_name,
-//             $swift->country,
-//             $swift->city,
-//             $swift->address,
-//         ];
-//     }
 }

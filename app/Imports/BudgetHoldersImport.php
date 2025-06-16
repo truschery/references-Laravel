@@ -26,7 +26,6 @@ class BudgetHoldersImport implements ToModel, WithHeadingRow, WithValidation, Wi
         public function __construct($userId)
         {
             $this->userId = $userId;
-
         }
 
         public function model(array $row)
@@ -46,12 +45,6 @@ class BudgetHoldersImport implements ToModel, WithHeadingRow, WithValidation, Wi
             ]);
         }
 
-        public function startRow(): int
-        {
-            return 5;
-        }
-
-
         public function chunkSize(): int
         {
             return 500;
@@ -60,13 +53,13 @@ class BudgetHoldersImport implements ToModel, WithHeadingRow, WithValidation, Wi
         public function rules(): array
         {
             return [
-//                'inn' => 'required|unique:budget_holders,tin',
-//                'naimenovanie' => 'required',
-//                'region' => 'required',
-//                'raion' => 'required',
-//                'adres' => 'required',
-//                'telefon' => 'required',
-//                'otvetstvennyi' => 'required',
+               'inn' => 'required|unique:budget_holders,tin',
+               'naimenovanie' => 'required',
+               'region' => 'required',
+               'raion' => 'required',
+               'adres' => 'required',
+               'telefon' => 'required',
+               'otvetstvennyi' => 'required',
             ];
         }
 }
